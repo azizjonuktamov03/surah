@@ -17,13 +17,19 @@
         .image-container { background: #fff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; overflow: hidden; display: flex; justify-content: center; }
         .image-container img { width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; }
         
-        .audio-section { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        .audio-section { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; margin-bottom: 20px; }
         audio { width: 100%; max-width: 500px; margin-top: 10px; outline: none; }
+        
+        .translation-section { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; }
+        .translation-section h3 { color: #1b5e20; margin-top: 0; font-size: 1.1em; border-bottom: 2px solid #e8f5e9; padding-bottom: 10px; text-align: center;}
+        .bismillah { text-align: center; color: #666; font-style: italic; margin-bottom: 20px; }
+        .verse-translation { margin-bottom: 15px; line-height: 1.6; color: #444; }
+        .verse-number { font-weight: bold; color: #2e7d32; margin-right: 5px; }
+        .source-note { font-size: 0.8em; color: #888; margin-top: 20px; text-align: right; font-style: italic; border-top: 1px dashed #ddd; padding-top: 10px;}
     </style>
 </head>
 <body>
     <div class="navbar">
-        <!-- Haqiqiy orqaga qaytish havolasi (index.html ga qaytadi) -->
         <a href="index.html" class="back-btn">
             <span>←</span> Orqaga
         </a>
@@ -31,14 +37,43 @@
     </div>
     
     <div class="surah-content-container">
+        <!-- Arabcha matn rasmi -->
         <div class="image-container">
             <img src="https://i.postimg.cc/nhDVkrXp/Screenshot-2026-09-27-07-03-06-948-com-quran-labs-androidquran-edit.jpg" alt="Masad surasi rasmi">
         </div>
+        
+        <!-- Ovozli qiroat -->
         <div class="audio-section">
             <p style="margin: 0 0 10px 0; color: #1b5e20; font-weight: bold;">Mishari Rashid al-Afasiy qiroati</p>
             <audio controls preload="none">
                 <source src="https://server8.mp3quran.net/afs/111.mp3" type="audio/mpeg">
             </audio>
+        </div>
+        
+        <!-- O'zbekcha tarjima -->
+        <div class="translation-section">
+            <h3>Masad surasining ma'nolari tarjimasi</h3>
+            <p class="bismillah">Mehribon va rahmli Alloh nomi bilan (boshlayman)</p>
+            
+            <div class="verse-translation">
+                <span class="verse-number">1.</span> Abu Lahabning qo'llari qurigay (halok bo'lgay)! Haqiqatan, quridi (halok bo'ldi) ham.
+            </div>
+            <div class="verse-translation">
+                <span class="verse-number">2.</span> Unga moli ham, kasb qilib topgan narsasi ham asqotmadi.
+            </div>
+            <div class="verse-translation">
+                <span class="verse-number">3.</span> Yaqinda uning o'zi ham,
+            </div>
+            <div class="verse-translation">
+                <span class="verse-number">4.</span> o'tin orqalagan xotini ham yolqinli olovga (do'zaxga) kirajak!
+            </div>
+            <div class="verse-translation">
+                <span class="verse-number">5.</span> Uning bo'ynida pishiq toladan eshilgan arqon bo'lur.
+            </div>
+            
+            <div class="source-note">
+                Tarjima: Shayx Abdulaziz Mansur (O'zbekiston Musulmonlari Idorasi tomonidan tasdiqlangan)
+            </div>
         </div>
     </div>
 </body>
