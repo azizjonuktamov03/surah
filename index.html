@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yodlangan Suralar</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f9f4; color: #333; margin: 0; padding: 0; overflow-x: hidden; }
+        #main-page { padding: 20px; max-width: 800px; margin: 0 auto; }
+        .header-box { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; text-align: center; }
+        h1 { color: #2e7d32; margin: 0 0 10px 0; }
+        .surah-list { list-style: none; padding: 0; margin: 0; }
+        .surah-item { background: #fff; margin-bottom: 15px; border-radius: 8px; border-left: 5px solid #4caf50; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center; padding: 20px; cursor: pointer; transition: transform 0.2s; }
+        .surah-item:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .surah-info h2 { margin: 0 0 5px 0; color: #1b5e20; font-size: 1.2em; }
+        .surah-info p { margin: 0; color: #777; font-size: 0.9em; }
+        .badge { background: #4caf50; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
+        
+        #surah-page { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #f4f9f4; z-index: 1000; overflow-y: auto; transform: translateX(100%); transition: transform 0.3s ease-in-out; display: flex; flex-direction: column; }
+        #surah-page.active { transform: translateX(0); }
+        
+        .navbar { background: #2e7d32; color: white; padding: 15px 20px; display: flex; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
+        .back-btn { background: none; border: none; color: white; font-size: 1.1em; cursor: pointer; display: flex; align-items: center; gap: 5px; padding: 5px; font-family: inherit; }
+        .navbar-title { flex-grow: 1; text-align: center; font-size: 1.2em; font-weight: bold; margin-right: 60px; }
+        
+        .surah-content-container { padding: 15px; max-width: 800px; margin: 0 auto; width: 100%; box-sizing: border-box; text-align: center; }
+        
+        .image-container { background: #fff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; overflow: hidden; display: flex; justify-content: center; }
+        .image-container img { width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; }
+        
+        .audio-section { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        audio { width: 100%; max-width: 500px; margin-top: 10px; outline: none; }
+    </style>
+</head>
+<body>
+    <div id="main-page">
+        <div class="header-box">
+            <h1>Yodlangan Suralar</h1>
+            <p style="color: #666; margin: 0;">Alloh ilmimizni ziyoda qilsin va Qur'onni qalbimizga jo qilsin!</p>
+        </div>
+        <ul class="surah-list">
+            <li class="surah-item" onclick="openSurah()">
+                <div class="surah-info">
+                    <h2>111. Masad surasi</h2>
+                    <p>Makkada nozil bo'lgan (5 oyat)</p>
+                </div>
+                <div class="surah-meta">
+                    <span class="badge">Yodlandi ✅</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="surah-page">
+        <div class="navbar">
+            <button class="back-btn" onclick="closeSurah()">
+                <span>←</span> Orqaga
+            </button>
+            <div class="navbar-title">Masad surasi</div>
+        </div>
+        <div class="surah-content-container">
+            <div class="image-container">
+                <img src="https://i.postimg.cc/nhDVkrXp/Screenshot-2026-09-27-07-03-06-948-com-quran-labs-androidquran-edit.jpg" alt="Masad surasi rasmi">
+            </div>
+            <div class="audio-section">
+                <p style="margin: 0 0 10px 0; color: #1b5e20; font-weight: bold;">Mishari Rashid al-Afasiy qiroati</p>
+                <audio id="surah-audio" controls preload="none">
+                    <source src="https://server8.mp3quran.net/afs/111.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openSurah() {
+            document.getElementById('surah-page').classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+        function closeSurah() {
+            document.getElementById('surah-page').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            var audio = document.getElementById('surah-audio');
+            if (audio) { audio.pause(); }
+        }
+    </script>
+</body>
+</html>
