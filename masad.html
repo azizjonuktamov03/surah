@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masad surasi</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f9f4; color: #333; margin: 0; padding: 0; }
+        
+        .navbar { background: #2e7d32; color: white; padding: 15px 20px; display: flex; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
+        .back-btn { background: none; border: none; color: white; font-size: 1.1em; cursor: pointer; display: flex; align-items: center; gap: 5px; padding: 5px; text-decoration: none; font-weight: bold; }
+        .navbar-title { flex-grow: 1; text-align: center; font-size: 1.2em; font-weight: bold; margin-right: 60px; }
+        
+        .surah-content-container { padding: 15px; max-width: 800px; margin: 0 auto; width: 100%; box-sizing: border-box; text-align: center; }
+        
+        .image-container { background: #fff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; overflow: hidden; display: flex; justify-content: center; }
+        .image-container img { width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; }
+        
+        .audio-section { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+        audio { width: 100%; max-width: 500px; margin-top: 10px; outline: none; }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <!-- Haqiqiy orqaga qaytish havolasi (index.html ga qaytadi) -->
+        <a href="index.html" class="back-btn">
+            <span>←</span> Orqaga
+        </a>
+        <div class="navbar-title">Masad surasi</div>
+    </div>
+    
+    <div class="surah-content-container">
+        <div class="image-container">
+            <img src="https://i.postimg.cc/nhDVkrXp/Screenshot-2026-09-27-07-03-06-948-com-quran-labs-androidquran-edit.jpg" alt="Masad surasi rasmi">
+        </div>
+        <div class="audio-section">
+            <p style="margin: 0 0 10px 0; color: #1b5e20; font-weight: bold;">Mishari Rashid al-Afasiy qiroati</p>
+            <audio controls preload="none">
+                <source src="https://server8.mp3quran.net/afs/111.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+</body>
+</html>
