@@ -54,7 +54,7 @@
 
     <div id="surah-page">
         <div class="navbar">
-            <button class="back-btn" onclick="closeSurah()">
+            <button class="back-btn" onclick="goBack()">
                 <span>←</span> Orqaga
             </button>
             <div class="navbar-title">Masad surasi</div>
@@ -76,13 +76,30 @@
         function openSurah() {
             document.getElementById('surah-page').classList.add('active');
             document.body.style.overflow = 'hidden'; 
+            
+            // Brauzer tarixiga soxta yozuv qo'shish
+            history.pushState({ surahOpen: true }, "", "#sura");
         }
-        function closeSurah() {
+
+        function closeSurahUI() {
             document.getElementById('surah-page').classList.remove('active');
             document.body.style.overflow = 'auto';
             var audio = document.getElementById('surah-audio');
             if (audio) { audio.pause(); }
         }
+
+        function goBack() {
+            // Yashil "Orqaga" tugmasi bosilganda UI ni yopish va tarixni bir qadam orqaga qaytarish
+            closeSurahUI();
+            if (history.state && history.state.surahOpen) {
+                history.back();
+            }
+        }
+
+        // Brauzer yoki telefonning o'zining orqaga strelkasi bosilganda ishlaydi
+        window.addEventListener('popstate', function(event) {
+            closeSurahUI();
+        });
     </script>
 </body>
 </html>
