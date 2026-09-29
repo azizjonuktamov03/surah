@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mo'un surasi</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f9f4; color: #333; margin: 0; padding: 0; }
+        
+        .navbar { background: #2e7d32; color: white; padding: 15px 20px; display: flex; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
+        .back-btn { background: none; border: none; color: white; font-size: 1.1em; cursor: pointer; display: flex; align-items: center; gap: 5px; padding: 5px; text-decoration: none; font-weight: bold; }
+        .navbar-title { flex-grow: 1; text-align: center; font-size: 1.2em; font-weight: bold; margin-right: 60px; }
+        
+        .surah-content-container { padding: 15px; max-width: 800px; margin: 0 auto; width: 100%; box-sizing: border-box; text-align: center; }
+        
+        .image-container { background: #fff; padding: 10px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; overflow: hidden; display: flex; justify-content: center; }
+        .image-container img { width: 100%; max-width: 600px; height: auto; border-radius: 8px; display: block; }
+        
+        .audio-section { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; margin-bottom: 20px; }
+        audio { width: 100%; max-width: 500px; margin-top: 10px; outline: none; }
+        
+        .translation-section { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; }
+        .translation-section h3 { color: #1b5e20; margin-top: 0; font-size: 1.1em; border-bottom: 2px solid #e8f5e9; padding-bottom: 10px; text-align: center;}
+        .bismillah { text-align: center; color: #666; font-style: italic; margin-bottom: 20px; }
+        .verse-translation { margin-bottom: 15px; line-height: 1.6; color: #444; }
+        .verse-number { font-weight: bold; color: #2e7d32; margin-right: 5px; }
+        .source-note { font-size: 0.8em; color: #888; margin-top: 20px; text-align: right; font-style: italic; border-top: 1px dashed #ddd; padding-top: 10px;}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="back-btn">
+            <span>←</span> Orqaga
+        </a>
+        <div class="navbar-title">Mo'un surasi</div>
+    </div>
+    
+    <div class="surah-content-container">
+        <!-- Arabcha matn rasmi -->
+        <div class="image-container">
+            <img src="https://i.postimg.cc/qvFpJSjf/Screenshot-2026-09-27-06-30-41-224-com-quran-labs-androidquran-edit.jpg" alt="Mo'un surasi rasmi">
+        </div>
+        
+        <!-- Ovozli qiroat -->
+        <div class="audio-section">
+            <p style="margin: 0 0 10px 0; color: #1b5e20; font-weight: bold;">Mishari Rashid al-Afasiy qiroati</p>
+            <audio controls preload="none">
+                <source src="https://server8.mp3quran.net/afs/107.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        
+        <!-- O'zbekcha tarjima -->
+        <div class="translation-section">
+            <h3>Mo'un surasining ma'nolari tarjimasi</h3>
+            <p class="bismillah">Mehribon va rahmli Alloh nomi bilan (boshlayman)</p>
+            
+            <div class="verse-translation">
+                <span class="verse-number">1.</span> (Ey Muhammad,) jazo (qiyomat) kunini inkor etadigan kimsani ko'rdingizmi?
+            </div>
+            <div class="verse-translation">
+                <span class="verse-number">2.</span> Bas, u yetimni jerkib haydaydigan,
+            </div>
+            <div class="verse-translation">
+                <span class="verse-number">3.</span> va (kimsalarni) miskin (bechora)ga taom berishga targ'ib qilmaydigan kimsadir.
+            </div>
+            <div class="verse-translation">
+                <span class="verse-number">4.</span> Bas, shunday namozxonlar holiga voyki,
+            </div>
+            <div class="verse-translation">
+                <span class="verse-number">5.</span> ular namozlarini "unutib" qo'yadigan kimsalardir.
+            </div>
+            <div class="verse-translation">
+                <span class="verse-number">6.</span> Ular riyokorlik qiladigan
+            </div>
+            <div class="verse-translation">
+                <span class="verse-number">7.</span> va ro'zg'or buyumlarini ham (kishilardan) man etadigan kimsalardir.
+            </div>
+            
+            <div class="source-note">
+                Tarjima: Shayx Abdulaziz Mansur (O'zbekiston Musulmonlari Idorasi tomonidan tasdiqlangan)
+            </div>
+        </div>
+    </div>
+</body>
+</html>
